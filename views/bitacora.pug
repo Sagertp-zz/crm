@@ -1,0 +1,16 @@
+extends layout.pug
+
+block content
+    h1 Bitacora.
+
+    table.table
+        thead.thead-dark
+            tr
+                td Codigo
+                td Nombre
+                td Descripcion
+        each val in bitacora
+            tr
+                td(scope="col")= val.id_producto
+                td(scope="col")= val.nombre
+                td(scope="col")= val.descripcion
